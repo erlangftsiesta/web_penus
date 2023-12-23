@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="icon" href="/public/logo-penus.png">
+    <title>SMK Plus Pelita Nusantara</title>
+    <style>
+        @media (max-width: 480px) {
+            #namaSekolah {
+                font-size: x-large;
+                font-weight: bold; /* Ubah ukuran logo sesuai kebutuhan */
+            }
+
+            #logoSekolah {
+                width: 27.5%; /* Ubah ukuran teks sesuai kebutuhan */
+            }
+        }
+    </style>
+</head>
+<body class="">
+    <heading>
+        <!-- navbar goes here -->
+<nav class="bg-transparent backdrop-filter backdrop-blur-md">
+    <div class=" mx-auto px-2">
+      <div class="flex justify-between">
+        
+        <div class="flex space-x-6">
+          <!-- logo -->
+      <div>
+        <a href="#"class="flex items-center py-4 text-gray-700">
+            <img id="logoSekolah" class="w-20 sm:w-12 mt-2 lg:w-16 lg:h-16 xl:w-20 xl:h-20" src="/public/logo-penus.png" alt="">
+            <span id="namaSekolah" data-theme-toggle="text" class="font-bold text-2xl hover:text-red-600/100 transition duration-300 delay-200">SMK <span id="span_NamaSekolah" class="transition duration-300 delay-200">PLUS</span> PELITA NUSANTARA</span>
+      </a></div>
+  <!-- primary nav -->
+      <!-- <div class="hidden md:flex flex items-center space-x-1">
+        <a href="#" class="py-4 px-3 text-gray-700 hover:text-gray-900">Features</a>
+        <a href="#" class="py-4 px-3 text-gray-700 hover:text-gray-900" >Pricing</a>
+        </div>
+          </div> -->
+  <!-- secondary nav -->
+      <div class="hidden md:flex flex items-center space-x-1">
+        <a data-theme-toggle="text" href="#" class="py-4 px-3 text-white">Home</a>
+        <a data-theme-toggle="text" href="#" class="py-4 px-3 text-white">PPDB 2024</a>
+      </div>
+        <!-- mobile button goes here-->
+    <div class="md:hidden flex ml-auto">
+      <button class="mobile-menu-button ml-auto">
+      <svg id="svg" class="w-6 h-6 transition duration-300 delay-200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+    <path fill-rule="evenodd" d="M3 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 5.25zm0 4.5A.75.75 0 013.75 9h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 9.75zm0 4.5a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75zm0 4.5a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z" clip-rule="evenodd" />
+  </svg>
+        </button>
+  
+    </div>
+        </div>
+      
+      
+    </div>
+  
+  
+  <!-- mobile menu -->
+    <div class="mobile-menu hidden md:hidden flex items-center">
+      <a data-theme-toggle="text" href="#" class="block py-2 px-4 text-sm hover:bg-gray-200">Features</a>
+      <a data-theme-toggle="text" href="#" class="block py-2 px-4 text-sm hover:bg-gray-200">Pricing</a>  
+    </div>
+  </nav>
+  
+  <!-- content goes here -->
+    </heading>
+    <section>
+        <video autoplay muted loop>
+            <source src="/public/header-content.mp4" type="video/mp4">
+            Maaf, browser Anda tidak mendukung tag video.
+        </video>
+    </section>
+
+    <!-- Button for Switch Theme -->
+    <div class="mt-2 md:hidden flex justify-center items-center">
+        <button class="mobile-menu-button" id="themeToggleBtn">
+            <svg id="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                <path fill-rule="evenodd"
+                    d="M3 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 5.25zm0 4.5A.75.75 0 013.75 9h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 9.75zm0 4.5a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75zm0 4.5a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+                    clip-rule="evenodd" />
+            </svg>
+        </button>
+    </div>
+<script src="/src/script.js"></script>
+<script src="/src/theme.js"></script>
+</body>
+</html>
