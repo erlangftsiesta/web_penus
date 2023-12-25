@@ -4,87 +4,306 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="icon" type="icon" href="/public/logo-penus.png">
     <title>SMK Plus Pelita Nusantara</title>
+    <link rel="stylesheet" href="/src/external.css">
     <style>
-        @media (max-width: 480px) {
+        /* EXTERNAL CSS */
+        @media (max-width: 640px) {
             #namaSekolah {
                 font-size: x-large;
                 font-weight: bold; /* Ubah ukuran logo sesuai kebutuhan */
             }
 
             #logoSekolah {
-                width: 27.5%; /* Ubah ukuran teks sesuai kebutuhan */
+                width: 23.5%; /* Ubah ukuran teks sesuai kebutuhan */
+            }
+            .hidden-mobile {
+                display: none;
             }
         }
     </style>
 </head>
 <body class="">
     <heading>
-        <!-- navbar goes here -->
-<nav class="bg-transparent backdrop-filter backdrop-blur-md">
-    <div class=" mx-auto px-2">
-      <div class="flex justify-between">
-        
-        <div class="flex space-x-6">
-          <!-- logo -->
-      <div>
-        <a href="#"class="flex items-center py-4 text-gray-700">
-            <img id="logoSekolah" class="w-20 sm:w-12 mt-2 lg:w-16 lg:h-16 xl:w-20 xl:h-20" src="/public/logo-penus.png" alt="">
-            <span id="namaSekolah" data-theme-toggle="text" class="font-bold text-2xl hover:text-red-600/100 transition duration-300 delay-200">SMK <span id="span_NamaSekolah" class="transition duration-300 delay-200">PLUS</span> PELITA NUSANTARA</span>
-      </a></div>
-  <!-- primary nav -->
-      <!-- <div class="hidden md:flex flex items-center space-x-1">
-        <a href="#" class="py-4 px-3 text-gray-700 hover:text-gray-900">Features</a>
-        <a href="#" class="py-4 px-3 text-gray-700 hover:text-gray-900" >Pricing</a>
-        </div>
-          </div> -->
-  <!-- secondary nav -->
-      <div class="hidden md:flex flex items-center space-x-1">
-        <a data-theme-toggle="text" href="#" class="py-4 px-3 text-white">Home</a>
-        <a data-theme-toggle="text" href="#" class="py-4 px-3 text-white">PPDB 2024</a>
-      </div>
-        <!-- mobile button goes here-->
-    <div class="md:hidden flex ml-auto">
-      <button class="mobile-menu-button ml-auto">
-      <svg id="svg" class="w-6 h-6 transition duration-300 delay-200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-    <path fill-rule="evenodd" d="M3 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 5.25zm0 4.5A.75.75 0 013.75 9h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 9.75zm0 4.5a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75zm0 4.5a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z" clip-rule="evenodd" />
-  </svg>
-        </button>
-  
-    </div>
-        </div>
-      
-      
-    </div>
-  
-  
-  <!-- mobile menu -->
-    <div class="mobile-menu hidden md:hidden flex items-center">
-      <a data-theme-toggle="text" href="#" class="block py-2 px-4 text-sm hover:bg-gray-200">Features</a>
-      <a data-theme-toggle="text" href="#" class="block py-2 px-4 text-sm hover:bg-gray-200">Pricing</a>  
-    </div>
-  </nav>
-  
-  <!-- content goes here -->
+        <!-- NAVBAR -->
+        <nav class="sticky top-0 bg-transparent backdrop-filter shadow-lg z-100" style="backdrop-filter: blur(1px);">
+            <div class=" mx-auto px-2">
+                <div class="flex justify-between">
+                    <div class="flex justify-between space-x-6">
+                        <!-- logo -->
+                        <div class="flex">
+                            <h1 href="#"class="flex items-center text-gray-700">
+                            <img id="logoSekolah" class="w-16 sm:w-12 mt-2 ml-0 lg:w-16 lg:h-16 xl:w-20 xl:h-20" src="/public/logo-penus.png" alt="">
+                            <span data-theme-toggle="text" class="hidden-mobile xs:hidden sm:hidden md:hidden font-bold text-black text-2xl transition duration-100 delay-50 drop-shadow-lg">SMK <span id="span_NamaSekolah" class="text-red-600/100 drop-shadow-lg">PLUS</span> PELITA NUSANTARA</span>
+                            <span data-theme-toggle="text" class="font-bold text-black text-xl transition duration-100 delay-50 drop-shadow-lg">SMK <span id="span_NamaSekolah" class="text-red-600/100 drop-shadow-lg">PLUS</span> PELITA NUSANTARA</span>
+                            </h1>
+                        </div>
+                        <!-- primary nav -->
+                        <div class="hidden md:flex flex justify-end items-center space-x-1">
+                            <a data-theme-toggle="text" href="#" class="py-4 px-3 hover:text-red-600">Beranda</a>
+                            <a data-theme-toggle="text" href="#" class="py-4 px-3 hover:text-red-600">PPDB 2024</a>
+                            <a data-theme-toggle="text" href="#" class="py-4 px-3 hover:text-red-600">Berita</a>
+                            <a data-theme-toggle="text" href="#" class="py-4 px-3 hover:text-red-600">Sosial Media</a>
+                        </div>
+                    </div>
+                    <!-- mobile button goes here-->
+                    <div class="mr-2 md:hidden flex">
+                        <button class="mobile-menu-button ml-auto">
+                            <svg id="svg" class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                 <path fill-rule="evenodd" d="M3 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 5.25zm0 4.5A.75.75 0 013.75 9h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 9.75zm0 4.5a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75zm0 4.5a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z" clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- mobile menu -->
+            <div class="mobile-menu hidden md:hidden flex justify-center relative z-10 animate__animated animate__fadeIn ">
+                <a data-theme-toggle="text" href="#" class=" py-2 px-4 text-sm hover:bg-gray-200 hover:text-red-600">Home</a>
+                <a data-theme-toggle="text" href="#" class=" py-2 px-4 text-sm hover:bg-gray-200 hover:text-red-600">PPBD 2024</a>
+                <a data-theme-toggle="text" href="#" class=" py-2 px-4 text-sm hover:bg-gray-200 hover:text-red-600">News</a>
+                <a data-theme-toggle="text" href="#" class=" py-2 px-4 text-sm hover:bg-gray-200 hover:text-red-600">Social Media</a>
+            </div>
+        </nav>
+
+        <!-- KONTEN VIDEO PEMBUKAAN / PENGENALAN -->
     </heading>
     <section>
-        <video autoplay muted loop>
+        <video autoplay muted loop style="object-fit: contain; width: 100%; height: 100%;">
             <source src="/public/header-content.mp4" type="video/mp4">
             Maaf, browser Anda tidak mendukung tag video.
         </video>
     </section>
 
-    <!-- Button for Switch Theme -->
-    <div class="mt-2 md:hidden flex justify-center items-center">
+    <!-- Tombol Switch Tema siang / malam -->
+    <div class="mt-4 flex justify-center items-center">
         <button class="mobile-menu-button" id="themeToggleBtn">
-            <svg id="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+            <svg id="buttonTheme" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
                 <path fill-rule="evenodd"
                     d="M3 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 5.25zm0 4.5A.75.75 0 013.75 9h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 9.75zm0 4.5a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75zm0 4.5a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
                     clip-rule="evenodd" />
             </svg>
         </button>
     </div>
+    <h1 data-theme-toggle="text" class="font-light text-center mt-2">(Tombol diatas tombol buat Switch Theme, nanti kalo udah deploy ke production baru ku fixed, malas mengdesign)</h1>
+    <!-- KONTEN INTERMESO SEKOLAH -->
+    <section class="mt-10">
+        <div class="flex flex-col items-center">
+            <h1 data-theme-toggle="text" class="mb-2 md:mb-2 xl:mb-2 font-bold text-2xl md:text-4xl xl:text-6xl mb-4 text-center">Sekolah Menengah Kejuruan</h1>
+            <span data-theme-toggle="text" class=" font-medium text-2xl md:text-4xl xl:text-6xl text-center">Plus Pelita Nusantara</span>
+            <p data-theme-toggle="text" class="mt-6 items-center text-center max-w-[55%] md:text-xl xl:text-2xl">Menjadi Sekolah Menengah Kejuruan Unggulan yang menghasilkan sumber daya manusia terampil, entrepreneur, dan religius.</p>
+        </div>
+        <div class=" mt-6 flex justify-center">
+            <a href="#">
+                <button class="md:w-48 md:h-16 bg-gradient-to-r from-red-800 via-red-600 to-red-500 text-white font-bold py-2 px-4 rounded-full shadow-xl">
+                    Selengkapnya
+                </button>
+            </a>
+        </div>
+    </section>
+
+    <section class="flex flex-col mt-8 mx-4">
+        <!-- DEKSTOP CONTENT (INFORMASI BIDANG KEAHLIAN) -->
+        <div class="xl:ml-64 xl:mr-64 md:ml-32 md:mr-32 hidden mt-8 md:flex md:justify-center xl:justify-center">
+            <!-- Gambar di bagian atas (diberi lebar maksimum) -->
+            <img class="w-full md:w-4/12 xl:w-5/12 md:ml-2 rounded-lg border-4 md:border-2" src="/public/informasi_bidang_keahlian.png" alt="Informasi Bidang Keahlian">
+            
+            <div class="md:ml-4">
+              <!-- Judul yang muncul di sebelah gambar pada mobile -->
+              <h1 data-theme-toggle="text" class="font-bold ml-6 xl:text-4xl md:text-2xl items-center">INFORMASI BIDANG KEAHLIAN</h1>
+              <!-- Konten teks -->
+              <div class="mt-4">
+                <!-- Deskripsi atau isi konten -->
+                <p data-theme-toggle="text" class=" ml-6 max-w-[100%] font-medium">SMK Plus Pelita Nusantara memiliki 4 bidang keahlian atau jurusan, Terdiri dari Rekayasa Perangkat lunak (RPL), Teknik Komputer Jaringan (TKJ), Multimedia (MM), Dan juga Perbankan Keuangan Mikro (PKM). Di SMK Plus Pelita Nusantara...</p>
+              </div>
+              <a class="flex justify-end" href="#">
+                <button class="ml-6 mt-2 bg-gradient-to-r from-red-800 via-red-600 to-red-500 text-white font-bold py-2 px-4 rounded-full shadow-xl">
+                    Selengkapnya &raquo;
+                </button>
+            </a>
+            </div>
+          </div>          
+
+        <!-- MOBILE CONTENT (INFORMASI BIDANG KEAHLIAN) -->
+        <div class="md:hidden xl:hidden 2xl:hidden">
+            <!-- hr / pembatas line -->
+            <hr data-theme-toggle="text" class="w-24 h-px mb-6 mx-auto bg-gray-400 border-0 rounded-full">
+            <!-- judul gambar -->
+            <h1 data-theme-toggle="text" class="font-bold text-xl mb-2 mt-4 md:hidden text-center">INFORMASI BIDANG KEAHLIAN</h1>
+            <!-- Gambar di bagian atas (diberi lebar maksimum) -->
+            <img class="w-full md:w-6/12 xl:w-4/12 md:ml-2 rounded-lg border-2" src="/public/informasi_bidang_keahlian.png" alt="Informasi Bidang Keahlian">
+            
+            <div class="mt-4">
+                <!-- Deskripsi atau isi konten -->
+                <p class="font-medium" data-theme-toggle="text">SMK Plus Pelita Nusantara memiliki 4 bidang keahlian atau jurusan, Terdiri dari Rekayasa Perangkat lunak (RPL), Teknik...</p>
+            </div>
+            <a class="mt-4 flex justify-end" href="#">
+                <button class="md:w-48 md:h-16 bg-gradient-to-r from-red-800 via-red-600 to-red-500 text-white font-bold py-2 px-4 rounded-full shadow-xl">
+                    Selengkapnya &raquo;
+                </button>
+            </a>
+            <!-- hr / pembatas line -->
+            <hr data-theme-toggle="text" class="w-24 h-px mt-6 mx-auto bg-gray-400 border-0 rounded-full">
+        </div>
+    </section>
+
+    <!-- KONTEN BERITA / NEWS -->
+    <section class="mt-6 md:mt-8 xl:mt-16">
+        <h1 class="pt-4 pb-4 font-bold text-slate-200 text-center text-xl md:text-2xl xl:text-4xl bg-gradient-to-tr from-red-800 via-red-700 to-red-600 ">Berita dan Informasi Terkini</h1>
+        <!-- KONTEN DIMULAI DARI SINI -->
+        <div class="container px-5 mx-auto max-w-7x1">
+            <div class="flex flex-wrap mt-4 justify-center spcenter xl:space-x-1">
+              <div class="mb-2 ms:mb-0 md:mb-0 xl:mb-0 bg-white xl:w-1/3 md:w-1/2 p-4 backdrop-filter shadow-lg rounded-lg md:mr-2 md:ml-2 xl:mr-6 xl:ml-6 md:mb-2 xl:mb-6">
+                <div class="bg-white p-2 rounded-lg overflow-hidden">
+                  <img class=" lg:h-60 xl:h-56 md:h-64 sm:h-72 xs:h-72 h-72 rounded w-full object-cover object-center mb-6 transition" src="/public/pekanIT_news_content.JPG" alt="Image Size 720x300">
+                  <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Event</h3>
+                  <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Pekan IT 2023</h2>
+                  <p class="leading-relaxed text-base">Ajang pertunjukan hasil eksplorasi serta bakat minat dari setiap jurusan, di mana kemampuan dan prestasi mereka diperlihatkan dengan gemilang untuk dinikmati oleh khalayak umum.</p>
+                </div>
+                <div class="flex justify-end bottom-0 right-0">
+                    <a class="text-xs md:text-sm hover:text-red-600" href="#">Lihat Lebih Banyak &raquo;</a>
+                </div>
+              </div>
+              <div class="mb-2 ms:mb-0 md:mb-0 xl:mb-0 bg-white xl:w-1/3 md:w-1/2 p-4 backdrop-filter shadow-lg rounded-lg md:mr-2 md:ml-2 xl:mr-6 xl:ml-6 md:mb-2 xl:mb-6">
+                <div class="bg-white p-2 rounded-lg">
+                  <img class="lg:h-60 xl:h-56 md:h-64 sm:h-72 xs:h-72 h-72 rounded w-full object-cover object-center mb-6 transition" src="/public/DSS_news_content.JPG" alt="Image Size 720x300">
+                  <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Event</h3>
+                  <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Devaccto Sharing Session</h2>
+                  <p class="leading-relaxed text-base">Ajang pertunjukan hasil eksplorasi serta bakat minat dari setiap jurusan, di mana kemampuan dan prestasi mereka diperlihatkan dengan gemilang untuk dinikmati oleh siswa dari seluruh jurusan serta Pembina Yayasan</p>
+                </div>
+                <div class="flex justify-end bottom-0 right-0">
+                    <a class="text-xs md:text-sm hover:text-red-600" href="#">Lihat Lebih Banyak &raquo;</a>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-wrap justify-center xl:space-x-1">
+                <div class="mb-2 ms:mb-0 md:mb-0 xl:mb-0 bg-white xl:w-1/3 md:w-1/2 p-4 backdrop-filter shadow-lg rounded-lg md:mr-2 md:ml-2 xl:mr-6 xl:ml-6 md:mb-2 xl:mb-6">
+                    <div class="bg-white p-2 rounded-lg">
+                      <img class="lg:h-60 xl:h-56 md:h-64 sm:h-72 xs:h-72 h-72 rounded w-full object-cover object-center mb-6 transition" src="/public/Preneur'sDay_news_content.JPG" alt="Image Size 720x300">
+                      <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Event</h3>
+                      <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Preneur's Day</h2>
+                      <p class="leading-relaxed text-base">Kegiatan tahunan untuk membina jiwa Entrepreneur, Pengelolaan Keuangan, serta tuntutan berpikir kritis nan kreatif untuk menjajakan produknya di Preneur's Day!</p>
+                    </div>
+                    <div class="flex justify-end bottom-0 right-0">
+                        <a class="text-xs md:text-sm hover:text-red-600" href="#">Lihat Lebih Banyak &raquo;</a>
+                    </div>
+                  </div>
+                  <div class="mb-2 ms:mb-0 md:mb-0 xl:mb-0 bg-white xl:w-1/3 md:w-1/2 p-4 backdrop-filter shadow-lg rounded-lg md:mr-2 md:ml-2 xl:mr-6 xl:ml-6 md:mb-2 xl:mb-6">
+                    <div class="bg-white p-2 rounded-lg">
+                      <img class="lg:h-60 xl:h-56 md:h-64 sm:h-72 xs:h-72 h-72 rounded w-full object-cover object-center mb-6 transition" src="/public/PSAF_news_content.JPG" alt="Image Size 720x300">
+                      <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Event</h3>
+                      <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Penus Sport Art & Festival</h2>
+                      <p class="leading-relaxed text-base">Ajang olahraga paling bergengsi yang diselenggarakan setiap tahun Di SMK Plus Pelita Nusantara. Selain untuk menunjukan bakat juga untuk menyehatkan setiap Warga sekolah</p>
+                    </div>
+                    <div class="flex justify-end bottom-0 right-0">
+                        <a class="text-xs md:text-sm hover:text-red-600" href="#">Lihat Lebih Banyak &raquo;</a>
+                    </div>
+                  </div>
+            </div>
+          </div>
+          <div class=" mt-6 flex justify-center">
+            <a href="#">
+                <button class="md:w-48 md:h-16 bg-gradient-to-r from-red-800 via-red-600 to-red-500 text-white font-bold py-2 px-4 rounded-full shadow-xl">
+                    Lihat Lebih Banyak
+                </button>
+            </a>
+        </div>
+    </section>
+
+    <!-- BANNER MENGAJAK ORANG UNTUK JOIN KEDALAM SMK PLUS PELITA NUSANTARA -->
+    <section class="mt-6 md:mt-8 xl:mt-16">
+        <div class="relative">
+            <img class="object-cover w-full h-36 xl:h-[600px] brightness-50" src="/public/banner_ajakan_bergabung.jpg" alt="">
+            <div class="absolute inset-0 flex flex-col items-center justify-center text-white">
+
+                <!-- banner untuk dekstop -->
+                <h1 class="hidden-mobile md:text-xl xl:text-xl font-bold md:mb-4 sm:mb-2">Tertarik bergabung bersama kami?</h1>
+                <p class="hidden-mobile md:text-xl xl:text-2xl mb-6">Daftar Sekarang!</p>
+                <!-- banner untuk mobile -->
+                <div class="flex flex-col justify-center">
+                    <h1 class="sm:hidden md:hidden xl:hidden 2xl:hidden font-bold text-center items-center">Let's Join with <span class="text-red-600">Us!</span></h1>
+                    <!-- tombol daftar untuk Mobile -->
+                    <a class="sm:hidden md:hidden xl:hidden 2xl:hidden font-semibold text-center items-center" href="https://ppdb.smkpluspnb.sch.id/"><u>REGISTER NOW!</u></a>
+                </div>
+
+                <!-- tombol daftar untuk Dekstop -->
+                <button class="hidden-mobile bg-gradient-to-r from-red-800 via-red-600 to-red-500 text-white font-bold py-2 px-4 rounded-full"><a href="https://ppdb.smkpluspnb.sch.id/">Klik Disini!</a></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERI / ALBUM KEGIATAN -->
+    <!-- <h1 data-theme-toggle="text" class="font-bold text-2xl text-center mt-6 mb-6">GALERI</h1>
+    <section class="flex justify-center md:mt-8 xl:mt-8 bg-gradient-to-tr from-red-800 via-red-600 to-red-500 mb-6">
+        <h1 data-theme-toggle class="font-bold text-center">ALBUM NYA NANTI DULU YAA BAAANGGGG</h1>
+        <img class="w-24" src="/public/logo-penus.png" alt="">
+        <h1 data-theme-toggle class="font-bold text-center">anggap lah album y</h1>
+    </section> -->
+
+    <!-- SOCIAL MEDIA KITA -->
+    <section class="mt-6">
+        <div class="">
+            <div class="">
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER  -->
+    <footer class="bg-white dark:bg-gray-900">
+        <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+            <div class="md:flex md:justify-between">
+              <div class="grid grid-cols-1 gap-8 sm:gap-8 sm:grid-cols-3">
+                  <div>
+                      <h2 class="text-sm font-semibold text-gray-900 uppercase dark:text-white">Website Developed By Devaccto RPL</h2>
+                      <ul>
+                        <li class="text-slate-500">-erlangftsiesta.js</li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+          <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+          <div class="sm:flex sm:items-center sm:justify-between">
+              <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="#" class="hover:underline">Devaccto RPL</a>
+              </span>
+              <div class="flex mt-4 sm:justify-center sm:mt-0">
+                  <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                      <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
+                            <path fill-rule="evenodd" d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z" clip-rule="evenodd"/>
+                        </svg>
+                      <span class="sr-only">Facebook page</span>
+                  </a>
+                  <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+                      <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 21 16">
+                            <path d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z"/>
+                        </svg>
+                      <span class="sr-only">Discord community</span>
+                  </a>
+                  <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+                      <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 17">
+                        <path fill-rule="evenodd" d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z" clip-rule="evenodd"/>
+                    </svg>
+                      <span class="sr-only">Twitter page</span>
+                  </a>
+                  <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+                      <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z" clip-rule="evenodd"/>
+                      </svg>
+                      <span class="sr-only">GitHub account</span>
+                  </a>
+                  <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+                      <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 0a10 10 0 1 0 10 10A10.009 10.009 0 0 0 10 0Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.094 20.094 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM8 1.707a8.821 8.821 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.758 45.758 0 0 0 8 1.707ZM1.642 8.262a8.57 8.57 0 0 1 4.73-5.981A53.998 53.998 0 0 1 9.54 7.222a32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.64 31.64 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM10 18.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 13.113 11a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z" clip-rule="evenodd"/>
+                    </svg>
+                      <span class="sr-only">Dribbble account</span>
+                  </a>
+              </div>
+          </div>
+        </div>
+    </footer>
+    
+
 <script src="/src/script.js"></script>
 <script src="/src/theme.js"></script>
 </body>

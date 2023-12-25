@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Menggunakan attribute selector untuk mencari elemen dengan data-theme-toggle
         var themeElements = document.querySelectorAll('[data-theme-toggle]');
         themeElements.forEach(function (element) {
-            element.classList.toggle('text-white');
+            element.classList.toggle('text-slate-200');
         });
 
         var contentSpan = document.getElementById('span_NamaSekolah');
@@ -21,6 +21,11 @@ document.addEventListener('DOMContentLoaded', function () {
         var contentSVG = document.getElementById('svg');
         if (contentSVG){
             contentSVG.classList.toggle('text-white')
+        } 
+
+        var buttonTheme = document.getElementById('buttonTheme');
+        if (buttonTheme){
+            buttonTheme.classList.toggle('text-white')
         } 
 
         // Simpan status tema di localStorage
