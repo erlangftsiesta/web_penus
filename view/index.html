@@ -23,9 +23,12 @@
                 display: none;
             }
         }
+        #home_scroll {
+            scroll-behavior: smooth;
+        }
     </style>
 </head>
-<body class="">
+<body class="" id="home">
     <heading>
         <!-- NAVBAR -->
         <nav class="sticky top-0 bg-transparent backdrop-filter shadow-lg z-100" style="backdrop-filter: blur(1.75px);">
@@ -42,10 +45,10 @@
                         </div>
                         <!-- primary nav -->
                         <div class="hidden md:flex flex justify-end items-center space-x-1">
-                            <a data-theme-toggle="text" href="#" class="py-4 px-3 hover:text-red-600">Beranda</a>
-                            <a data-theme-toggle="text" href="#" class="py-4 px-3 hover:text-red-600">PPDB 2024</a>
-                            <a data-theme-toggle="text" href="#" class="py-4 px-3 hover:text-red-600">Berita</a>
-                            <a data-theme-toggle="text" href="#" class="py-4 px-3 hover:text-red-600">Sosial Media</a>
+                            <a data-scroll="scroll" data-theme-toggle="text" href="#home" class="py-4 px-3 hover:text-red-600">Beranda</a>
+                            <a data-scroll="scroll" data-theme-toggle="text" href="https://ppdb2024.com" class="py-4 px-3 hover:text-red-600">PPDB 2024</a>
+                            <a data-scroll="scroll" data-theme-toggle="text" href="#berita" class="py-4 px-3 hover:text-red-600">Berita</a>
+                            <a data-scroll="scroll" data-theme-toggle="text" href="#sosmed" class="py-4 px-3 hover:text-red-600">Sosial Media</a>
                         </div>
                     </div>
                     <!-- mobile button goes here-->
@@ -60,10 +63,10 @@
             </div>
             <!-- mobile menu -->
             <div class="mobile-menu hidden md:hidden flex justify-center relative z-10 animate__animated animate__fadeIn ">
-                <a data-theme-toggle="text" href="#" class=" py-2 px-4 text-sm hover:bg-gray-200 hover:text-red-600">Home</a>
-                <a data-theme-toggle="text" href="#" class=" py-2 px-4 text-sm hover:bg-gray-200 hover:text-red-600">PPBD 2024</a>
-                <a data-theme-toggle="text" href="#" class=" py-2 px-4 text-sm hover:bg-gray-200 hover:text-red-600">News</a>
-                <a data-theme-toggle="text" href="#" class=" py-2 px-4 text-sm hover:bg-gray-200 hover:text-red-600">Social Media</a>
+                <a data-scroll="scroll" data-theme-toggle="text" href="#home" class=" py-2 px-4 text-sm hover:bg-gray-200 hover:text-red-600">Home</a>
+                <a data-scroll="scroll" data-theme-toggle="text" href="https://ppdb2024.com" class=" py-2 px-4 text-sm hover:bg-gray-200 hover:text-red-600">PPBD 2024</a>
+                <a data-scroll="scroll" data-theme-toggle="text" href="#berita" class=" py-2 px-4 text-sm hover:bg-gray-200 hover:text-red-600">News</a>
+                <a data-scroll="scroll" data-theme-toggle="text" href="#sosmed" class=" py-2 px-4 text-sm hover:bg-gray-200 hover:text-red-600">Social Media</a>
             </div>
         </nav>
 
@@ -149,7 +152,7 @@
     </section>
 
     <!-- KONTEN BERITA / NEWS -->
-    <section class="mt-6 md:mt-8 xl:mt-16">
+    <section id="berita" class="mt-6 md:mt-8 xl:mt-16">
         <h1 class="pt-4 pb-4 font-bold text-slate-200 text-center text-xl md:text-2xl xl:text-4xl bg-gradient-to-tr from-red-800 via-red-700 to-red-600 ">Berita dan Informasi Terkini</h1>
         <!-- KONTEN DIMULAI DARI SINI -->
         <div class="container px-5 mx-auto max-w-7x1">
@@ -251,7 +254,7 @@
     </section>
 
     <!-- FOOTER  -->
-    <footer class="bg-white dark:bg-gray-900">
+    <footer id="sosmed" class="bg-white dark:bg-gray-900">
         <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
             <div class="md:flex md:justify-between">
               <div class="grid grid-cols-1 gap-8 sm:gap-8 sm:grid-cols-3">
